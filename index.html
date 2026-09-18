@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrey — Roblox Developer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#09090b;color:#f4f4f5;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1080px,calc(100% - 36px));margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,9,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid #202027}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:19px;font-weight:800}.logo span{color:#8b5cf6}
+.links{display:flex;align-items:center;gap:25px;color:#a1a1aa;font-size:14px}.links a:hover{color:#fff}
+.lang{cursor:pointer;border:1px solid #303038;background:#151519;color:#ddd;border-radius:8px;padding:6px 9px;font-size:12px}
+.hero{min-height:78vh;display:flex;align-items:center}.hero-inner{padding:90px 0;max-width:850px}
+.badge{display:inline-block;border:1px solid #302844;background:#15111f;color:#bda8ff;border-radius:999px;padding:6px 12px;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,86px);line-height:.98;letter-spacing:-5px;margin-bottom:25px}h1 span{color:#8b5cf6}
+.lead{font-size:19px;color:#a1a1aa;max-width:720px}.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:11px 17px;border:1px solid #303038;background:#151519;border-radius:10px;font-weight:650}.btn.primary{background:#8b5cf6;border-color:#8b5cf6}.btn:hover{transform:translateY(-2px)}
+section{padding:85px 0;border-top:1px solid #19191f}.title{font-size:34px;letter-spacing:-1.5px}.sub{color:#71717a;margin:5px 0 30px}
+.about{display:grid;grid-template-columns:1.45fr .8fr;gap:18px}.card{background:#111114;border:1px solid #25252d;border-radius:17px;padding:25px}.card p{color:#a1a1aa}
+.facts{display:grid;gap:18px}.fact strong{font-size:25px;display:block}.fact span{color:#71717a;font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.tag{font-size:13px;color:#d4d4d8;background:#19191f;border:1px solid #292930;padding:7px 10px;border-radius:8px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:22px;background:#111114;border:1px solid #25252d;border-radius:15px}
+.skill h3{font-size:17px;margin-bottom:5px}.skill p{color:#8f8f98;font-size:14px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{overflow:hidden;background:#111114;border:1px solid #25252d;border-radius:17px}
+.preview{height:220px;background:linear-gradient(135deg,#17131f,#0e0e12);display:flex;align-items:center;justify-content:center;color:#555560;font-size:14px}
+.preview video{width:100%;height:100%;object-fit:cover;display:block}.project-body{padding:21px}.project h3{font-size:21px}
+.preview iframe{width:100%;height:100%;border:0}
+.project p{color:#8f8f98;margin:7px 0 13px}.project .tags{margin-top:0}
+.contact{text-align:center}.contact p{color:#92929a;margin:8px auto 24px;max-width:620px}
+footer{padding:35px 0;color:#5f5f67;text-align:center;font-size:13px}
+@media(max-width:750px){.links{gap:10px}.links a{display:none}.about,.skills,.projects{grid-template-columns:1fr}h1{letter-spacing:-3px}.hero{min-height:70vh}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<div class="logo">ANDREY<span>.</span></div>
+<div class="links">
+<a href="#about" data-en="About" data-ru="Обо мне">About</a>
+<a href="#skills" data-en="Skills" data-ru="Навыки">Skills</a>
+<a href="#projects" data-en="Projects" data-ru="Работы">Projects</a>
+<a href="#contact" data-en="Contact" data-ru="Контакты">Contact</a>
+<button class="lang" id="langBtn" onclick="toggleLang()">RU</button>
+</div></div></nav>
+
+<header class="hero"><div class="container hero-inner">
+<div class="badge" data-en="ROBLOX GAMEPLAY DEVELOPER" data-ru="ROBLOX GAMEPLAY DEVELOPER">ROBLOX GAMEPLAY DEVELOPER</div>
+<h1 data-en="Hi, I'm <span>Andrey.</span>" data-ru="Привет, я <span>Андрей.</span>">Hi, I'm <span>Andrey.</span></h1>
+<p class="lead" data-en="I've been working with Roblox Studio for 4 years. I create gameplay systems, mechanics and work on different types of projects — from PvP and simulators to asymmetrical games."
+data-ru="Я занимаюсь разработкой в Roblox Studio уже 4 года. Создаю игровые системы, механики и работаю над разными типами проектов — от PvP и симуляторов до асимметричных игр.">I've been working with Roblox Studio for 4 years. I create gameplay systems, mechanics and work on different types of projects — from PvP and simulators to asymmetrical games.</p>
+<div class="buttons"><a class="btn primary" href="#projects" data-en="View my work" data-ru="Посмотреть работы">View my work</a><a class="btn" href="#contact" data-en="Contact me" data-ru="Связаться">Contact me</a></div>
+</div></header>
+
+<section id="about"><div class="container">
+<h2 class="title" data-en="About me" data-ru="Обо мне">About me</h2><p class="sub" data-en="A little about my experience" data-ru="Немного о моём опыте">A little about my experience</p>
+<div class="about">
+<div class="card"><p data-en="My main tool is <b>Roblox Studio / Luau</b>. I can create systems from scratch, recreate and adapt existing mechanics, find and fix bugs, and work with existing code."
+data-ru="Основной инструмент — <b>Roblox Studio / Luau</b>. Я могу создавать системы с нуля, повторять и адаптировать существующие механики, искать и исправлять баги, а также работать с уже существующим кодом.">My main tool is <b>Roblox Studio / Luau</b>. I can create systems from scratch, recreate and adapt existing mechanics, find and fix bugs, and work with existing code.</p>
+<div class="tags"><span class="tag">Roblox Studio</span><span class="tag">Luau</span><span class="tag">Python</span><span class="tag">C#</span><span class="tag">Godot</span></div></div>
+<div class="card facts"><div class="fact"><strong>4 years</strong><span data-en="Roblox Studio" data-ru="Roblox Studio">Roblox Studio</span></div><div class="fact"><strong>RU / EN</strong><span data-en="Russian and English" data-ru="Русский и английский">Russian and English</span></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<h2 class="title" data-en="What I can do" data-ru="Что я умею">What I can do</h2><p class="sub" data-en="Systems and tasks I can work with" data-ru="Системы и задачи, с которыми я могу работать">Systems and tasks I can work with</p>
+<div class="skills">
+<div class="skill"><h3>⚙️ <span data-en="Game Systems" data-ru="Игровые системы">Game Systems</span></h3><p data-en="Developing different mechanics and systems from scratch or from an existing example." data-ru="Разработка различных механик и систем с нуля или по готовому примеру."></p></div>
+<div class="skill"><h3>🔧 <span data-en="Bug Fixing" data-ru="Багфиксы">Bug Fixing</span></h3><p data-en="Finding the causes of errors and fixing problems in existing projects." data-ru="Поиск причин ошибок и исправление проблем в существующем проекте."></p></div>
+<div class="skill"><h3>🎨 UI</h3><p data-en="Creating and connecting user interfaces to game systems." data-ru="Создание и подключение пользовательских интерфейсов к игровым системам."></p></div>
+<div class="skill"><h3>💾 Data</h3><p data-en="Working with player data, saves and game progression." data-ru="Работа с данными игроков, сохранениями и игровой прогрессией."></p></div>
+<div class="skill"><h3>🤖 AI</h3><p data-en="NPC behavior, chasing, interaction and other AI mechanics." data-ru="NPC, поведение, преследование, взаимодействие и другие AI-механики."></p></div>
+<div class="skill"><h3>⚔️ PvP</h3><p data-en="Combat systems, abilities, hitboxes, damage, states and interactions." data-ru="Боевые системы, способности, хитбоксы, урон, состояния и взаимодействия."></p></div>
+<div class="skill"><h3>🎮 <span data-en="Genres" data-ru="Жанры">Genres</span></h3><p data-en="PvP, simulators, asymmetrical games and other game modes." data-ru="PvP, симуляторы, асимметричные игры и другие игровые режимы."></p></div>
+<div class="skill"><h3>🔄 <span data-en="Adaptation" data-ru="Адаптация">Adaptation</span></h3><p data-en="Recreating, porting and modifying existing game systems for a specific task." data-ru="Повторение, перенос и изменение существующих игровых систем под задачу."></p></div>
+<div class="skill"><h3>➕ <span data-en="And more" data-ru="И другое">And more</span></h3><p data-en="I'm ready to learn and work with new systems and tasks." data-ru="Готов разбираться в новых системах и задачах."></p></div>
+</div></div></section>
+
+<section id="projects"><div class="container">
+<h2 class="title" data-en="My work" data-ru="Мои работы">My work</h2><p class="sub" data-en="Some projects and systems I've created" data-ru="Некоторые проекты и системы, которые я создавал">Some projects and systems I've created</p>
+<div class="projects">
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/GNuKflTolZs?autoplay=1&mute=1&loop=1&playlist=GNuKflTolZs&controls=0" allow="autoplay" loading="lazy"></iframe></div><div class="project-body"><h3>Slime Game</h3><p data-en="A game with physics-based throwing, luck, collecting and progression." data-ru="Игра с физикой броска, удачей, коллекционированием и прогрессией."></p><div class="tags"><span class="tag">Physics</span><span class="tag">RNG</span><span class="tag">Economy</span><span class="tag">Progression</span></div></div></div>
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/IoT4eATX8Og?autoplay=1&mute=1&loop=1&playlist=IoT4eATX8Og&controls=0" allow="autoplay" loading="lazy"></iframe></div><div class="project-body"><h3>Fling Game</h3><p data-en="A physics project focused on flinging players and interacting with objects." data-ru="Проект с физикой, бросками игроков и взаимодействием с объектами."></p><div class="tags"><span class="tag">Physics</span><span class="tag">Velocity</span><span class="tag">Interaction</span></div></div></div>
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/f_rcYCD_fQM?autoplay=1&mute=1&loop=1&playlist=f_rcYCD_fQM&controls=0" allow="autoplay" loading="lazy"></iframe></div><div class="project-body"><h3>Battleground Framework</h3><p data-en="A PvP framework with characters, abilities, attacks, hitboxes and game states." data-ru="Система для PvP: персонажи, способности, атаки, хитбоксы и игровые состояния."></p><div class="tags"><span class="tag">PvP</span><span class="tag">Abilities</span><span class="tag">Hitboxes</span><span class="tag">Combat</span></div></div></div>
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/e-DwKKcHPxI?autoplay=1&mute=1&loop=1&playlist=e-DwKKcHPxI&controls=0" allow="autoplay" loading="lazy"></iframe></div><div class="project-body"><h3>Placement System</h3><p data-en="A building system inspired by SCP-3008: ghost preview, rotation, grid snapping and collision checks before placing objects." data-ru="Система строительства в стиле SCP-3008: превью объекта, поворот, привязка к сетке и проверка коллизий перед установкой."></p><div class="tags"><span class="tag">Placement</span><span class="tag">Ghost Preview</span><span class="tag">Snapping</span><span class="tag">Building</span></div></div></div>
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/8fYQtwn8P44?autoplay=1&mute=1&loop=1&playlist=8fYQtwn8P44&controls=0" allow="autoplay" loading="lazy"></iframe></div><div class="project-body"><h3>Mini ASMR Showcase</h3><p data-en="A small showcase focused on satisfying interactions, smooth animations and sound design." data-ru="Небольшой шоукейс с приятными взаимодействиями, плавными анимациями и звуковым оформлением."></p><div class="tags"><span class="tag">ASMR</span><span class="tag">Sound</span><span class="tag">Animations</span><span class="tag">Interaction</span></div></div></
+<div class="project"><div class="preview"><iframe src="https://www.youtube.com/embed/6v3t-k4udjU?autoplay=1&mute=1&loop=1&playlist=6v3t-k4udjU" title="Die of Death (Modded)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="project-body"><h3>Die of Death (Modded)</h3><p data-en="A modded version of Die of Death. I worked with decompiled and third-party code: reading unfamiliar systems, modifying mechanics and adding new features on top of them." data-ru="Модифицированная версия Die of Death. Я работал с декомпилированным и чужим кодом: разбирался в незнакомых системах, изменял механики и добавлял новые функции поверх них."></p><div class="tags"><span class="tag">Modding</span><span class="tag">Decompiled Code</span><span class="tag">Third-party Code</span><span class="tag">Adaptation</span></div></div></div></div></div></section>
+
+<section id="contact"><div class="container contact">
+<h2 class="title" data-en="Contact me" data-ru="Связаться со мной">Contact me</h2>
+<p data-en="If you need a Roblox developer for a system, mechanic or bug fixing — feel free to contact me." data-ru="Если вам нужен Roblox-разработчик для системы, механики или исправления багов — свяжитесь со мной."></p>
+<div class="buttons" style="justify-content:center"><a class="btn primary" href="https://discord.com/" target="_blank" id="discordLink">Discord</a></div>
+</div></section>
+<footer>© 2026 Andrey. Roblox Developer Portfolio.</footer>
+
+<script>
+const DISCORD_URL = "https://discord.com/users/1227971941005131888888"; // ЗАМЕНИ на свою ссылку-приглашение Discord
+let lang = localStorage.getItem("portfolioLang") || "en";
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerHTML = el.dataset[lang];
+  });
+  document.getElementById("langBtn").textContent = lang === "en" ? "RU" : "EN";
+}
+function toggleLang(){
+  lang = lang === "en" ? "ru" : "en";
+  localStorage.setItem("portfolioLang", lang);
+  applyLang();
+}
+document.getElementById("discordLink").href = DISCORD_URL;
+applyLang();
+</script>
+</body>
+</html>
